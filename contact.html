@@ -2,249 +2,713 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="icon" href="images/logo.png">
 
-<title>Contact Us | Saka Food Delivery</title>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
+<title>Contact | SAKA Food Delivery</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+<link rel="stylesheet"
+href="style.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
 rel="stylesheet">
 
 <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
+<!-- Leaflet CSS -->
+
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- =======================
+        NAVBAR
+======================= -->
+
+<header>
 
 <nav class="navbar">
 
 <div class="logo">
-    <img src="images/logo.png" alt="Saka Logo">
-    <span>SAKA</span>
+
+<img src="images/logo.png" alt="SAKA">
+
+<h2>SAKA</h2>
+
 </div>
 
 <ul class="nav-links">
+
 <li><a href="index.html">Home</a></li>
+
 <li><a href="about.html">About</a></li>
-<li><a href="contact.html" class="active">Contact</a></li>
+
+<li><a class="active"
+href="contact.html">Contact</a></li>
+
+<li><a href="submissions.html">Submissions</a></li>
+
 </ul>
 
-<button class="nav-btn">
-Order Now
+<div class="nav-buttons">
+
+<button class="login-btn">
+
+Login
+
 </button>
+
+<button class="order-btn">
+
+Order Now
+
+</button>
+
+</div>
 
 </nav>
 
-<!-- CONTACT HERO -->
+</header>
 
-<section class="page-section">
+<!-- =======================
+        HERO
+======================= -->
 
-<div class="about-hero">
+<section class="hero about-hero">
 
-<span class="badge">
-📞 Get In Touch
+<div class="hero-left">
+
+<span class="hero-tag">
+
+📞 Contact SAKA
+
 </span>
 
 <h1>
-We're Here To Help
+
+We're Always
+
+<span>
+
+Here To Help
+
+</span>
+
 </h1>
 
 <p>
-Have questions, feedback, or partnership inquiries?
-Our team would love to hear from you.
+
+Whether you have a question,
+feedback,
+partnership inquiry,
+or need support,
+our team is always ready to assist you.
+
 </p>
 
 </div>
 
+<div class="hero-right">
+
+<img src="images/contact.png"
+alt="Contact">
+
+</div>
+
 </section>
 
-<!-- CONTACT INFO -->
+<!-- =======================
+      CONTACT INFO
+======================= -->
 
-<section class="features">
+<section class="contact-info">
 
-<h2>Contact Information</h2>
+<div class="section-heading">
 
-<div class="feature-grid">
+<h2>
 
-<div class="feature-card">
-<i class="fa-solid fa-envelope"></i>
-<h3>Email</h3>
-<p>support@sakafood.com</p>
+Get In Touch
+
+</h2>
+
+<p>
+
+Multiple ways to reach us.
+
+</p>
+
 </div>
 
-<div class="feature-card">
-<i class="fa-solid fa-phone"></i>
-<h3>Phone</h3>
-<p>+91 98765 43210</p>
-</div>
+<div class="contact-grid">
 
-<div class="feature-card">
+<div class="contact-card">
+
 <i class="fa-solid fa-location-dot"></i>
-<h3>Address</h3>
-<p>Chennai, Tamil Nadu, India</p>
+
+<h3>
+
+Office Address
+
+</h3>
+
+<p>
+
+SAKA Headquarters<br>
+
+Chennai,
+Tamil Nadu,
+India
+
+</p>
+
 </div>
 
-<div class="feature-card">
+<div class="contact-card">
+
+<i class="fa-solid fa-phone"></i>
+
+<h3>
+
+Call Us
+
+</h3>
+
+<p>
+
++91 98765 43210
+
+</p>
+
+<p>
+
++91 98765 12345
+
+</p>
+
+</div>
+
+<div class="contact-card">
+
+<i class="fa-solid fa-envelope"></i>
+
+<h3>
+
+Email
+
+</h3>
+
+<p>
+
+support@sakafood.com
+
+</p>
+
+<p>
+
+contact@sakafood.com
+
+</p>
+
+</div>
+
+<div class="contact-card">
+
 <i class="fa-solid fa-clock"></i>
-<h3>Working Hours</h3>
-<p>24/7 Customer Support</p>
+
+<h3>
+
+Working Hours
+
+</h3>
+
+<p>
+
+Mon - Sat
+
+9:00 AM - 9:00 PM
+
+</p>
+
 </div>
 
 </div>
 
 </section>
 
-<!-- CONTACT FORM -->
+<!-- =======================
+      CONTACT FORM
+======================= -->
 
-<section class="features">
-
-<h2>Send Us a Message</h2>
+<section class="contact-section">
 
 <div class="contact-container">
 
+<div class="contact-form">
+
+<h2>
+
+Send Us A Message
+
+</h2>
+
 <form id="contactForm">
+
+<div class="input-group">
+
+<label>
+
+Full Name
+
+</label>
 
 <input
 type="text"
 id="name"
-placeholder="Your Name">
+placeholder="Enter your name">
+
+</div>
+
+<div class="input-group">
+
+<label>
+
+Email Address
+
+</label>
 
 <input
 type="email"
 id="email"
-placeholder="Your Email">
+placeholder="Enter your email">
+
+</div>
+
+<div class="input-group">
+
+<label>
+
+Phone Number
+
+</label>
 
 <input
 type="tel"
 id="phone"
-placeholder="Phone Number">
+placeholder="Enter your phone number">
+
+</div>
+
+<div class="input-group">
+
+<label>
+
+Subject
+
+</label>
 
 <input
 type="text"
 id="subject"
 placeholder="Subject">
 
+</div>
+
+<div class="input-group">
+
+<label>
+
+Message
+
+</label>
+
 <textarea
 id="message"
-placeholder="Your Message"></textarea>
+rows="6"
+placeholder="Write your message..."></textarea>
 
-<button type="submit">
+</div>
+
+<button
+type="submit"
+class="primary-btn">
+
 Send Message
+
 </button>
 
 </form>
 
 </div>
+        </div>
+
+        <!-- ===========================
+                OFFICE LOCATION
+        ============================ -->
+
+        <div class="map-container">
+
+            <h2>Visit Our Office</h2>
+
+            <p>
+
+                We'd love to meet you.
+                Find us using the interactive map below.
+
+            </p>
+
+            <!-- Leaflet Map -->
+
+            <div id="map"></div>
+
+        </div>
+
+    </div>
 
 </section>
 
-<!-- FAQ -->
+<!-- ===========================
+        BUSINESS HOURS
+=========================== -->
 
-<section class="features">
+<section class="business-hours">
 
-<h2>Frequently Asked Questions</h2>
+    <div class="section-heading">
 
-<div class="feature-grid">
+        <h2>
 
-<div class="feature-card">
-<h3>How fast is delivery?</h3>
-<p>
-Most orders arrive within 20–40 minutes depending on location.
-</p>
+            Business Hours
+
+        </h2>
+
+        <p>
+
+            Our support team is available throughout the week.
+
+        </p>
+
+    </div>
+
+    <div class="hours-grid">
+
+        <div class="day-card">
+
+            <h3>Monday</h3>
+
+            <span>09:00 AM - 09:00 PM</span>
+
+        </div>
+
+        <div class="day-card">
+
+            <h3>Tuesday</h3>
+
+            <span>09:00 AM - 09:00 PM</span>
+
+        </div>
+
+        <div class="day-card">
+
+            <h3>Wednesday</h3>
+
+            <span>09:00 AM - 09:00 PM</span>
+
+        </div>
+
+        <div class="day-card">
+
+            <h3>Thursday</h3>
+
+            <span>09:00 AM - 09:00 PM</span>
+
+        </div>
+
+        <div class="day-card">
+
+            <h3>Friday</h3>
+
+            <span>09:00 AM - 09:00 PM</span>
+
+        </div>
+
+        <div class="day-card">
+
+            <h3>Saturday</h3>
+
+            <span>10:00 AM - 08:00 PM</span>
+
+        </div>
+
+        <div class="day-card">
+
+            <h3>Sunday</h3>
+
+            <span>Closed</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+            FAQ
+=========================== -->
+
+<section class="faq">
+
+<div class="section-heading">
+
+<h2>
+
+Frequently Asked Questions
+
+</h2>
+
 </div>
 
-<div class="feature-card">
-<h3>Can I track my order?</h3>
-<p>
-Yes. Real-time tracking is available for all deliveries.
-</p>
-</div>
+<div class="faq-container">
 
-<div class="feature-card">
-<h3>What payment methods are supported?</h3>
-<p>
-UPI, Debit Cards, Credit Cards, Wallets and Net Banking.
-</p>
-</div>
+<details>
 
-<div class="feature-card">
-<h3>Do you offer refunds?</h3>
+<summary>
+
+How long does delivery take?
+
+</summary>
+
 <p>
-Yes. Eligible orders are covered under our refund policy.
+
+Most deliveries arrive within
+20–30 minutes depending
+on your location.
+
 </p>
-</div>
+
+</details>
+
+<details>
+
+<summary>
+
+Can I cancel my order?
+
+</summary>
+
+<p>
+
+Yes.
+Orders can be cancelled
+before the restaurant
+starts preparing them.
+
+</p>
+
+</details>
+
+<details>
+
+<summary>
+
+How can I become a partner?
+
+</summary>
+
+<p>
+
+Contact us using the
+form above and our
+partnership team will
+reach out to you.
+
+</p>
+
+</details>
 
 </div>
 
 </section>
 
-<!-- SOCIAL -->
+<!-- ===========================
+      SOCIAL MEDIA
+=========================== -->
 
-<section class="features">
+<section class="social-section">
 
-<h2>Follow Us</h2>
+<div class="section-heading">
 
-<div class="social-links">
+<h2>
+
+Connect With Us
+
+</h2>
+
+<p>
+
+Follow us for offers and updates.
+
+</p>
+
+</div>
+
+<div class="social-icons">
 
 <a href="#">
+
 <i class="fab fa-facebook-f"></i>
+
 </a>
 
 <a href="#">
+
 <i class="fab fa-instagram"></i>
+
 </a>
 
 <a href="#">
-<i class="fab fa-twitter"></i>
+
+<i class="fab fa-x-twitter"></i>
+
 </a>
 
 <a href="#">
+
 <i class="fab fa-linkedin-in"></i>
+
+</a>
+
+<a href="#">
+
+<i class="fab fa-youtube"></i>
+
 </a>
 
 </div>
 
 </section>
 
-<!-- MAP -->
-
-<section class="features">
-
-<h2>Our Location</h2>
-
-<div class="testimonial-card">
-
-<p>
-📍 Chennai, Tamil Nadu, India
-</p>
-
-<p>
-Future integration:
-Google Maps Embed API
-</p>
-
-</div>
-
-</section>
-
-<!-- FOOTER -->
+<!-- ===========================
+        FOOTER
+=========================== -->
 
 <footer>
 
+<div class="footer-container">
+
+<div class="footer-column">
+
+<h2>
+
+SAKA
+
+</h2>
+
 <p>
-© 2025 Saka Food Delivery. All Rights Reserved.
+
+Delivering Happiness,
+One Meal At A Time.
+
+</p>
+
+</div>
+
+<div class="footer-column">
+
+<h3>
+
+Quick Links
+
+</h3>
+
+<a href="index.html">
+
+Home
+
+</a>
+
+<a href="about.html">
+
+About
+
+</a>
+
+<a href="contact.html">
+
+Contact
+
+</a>
+
+<a href="submissions.html">
+
+Submissions
+
+</a>
+
+</div>
+
+<div class="footer-column">
+
+<h3>
+
+Contact
+
+</h3>
+
+<p>
+
+📍 Chennai,
+Tamil Nadu
+
+</p>
+
+<p>
+
+📞 +91 9876543210
+
+</p>
+
+<p>
+
+✉ support@sakafood.com
+
+</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<p class="copyright">
+
+© 2026 SAKA Food Delivery.
+All Rights Reserved.
+
 </p>
 
 </footer>
 
-<script src="script.js"></script>
+<!-- Leaflet JS -->
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src="js/contact.js"></script>
+
+<script src="js/map.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 

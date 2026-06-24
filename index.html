@@ -1,162 +1,760 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saka Food Delivery</title>
-    <link rel="icon" href="images/logo.png">
-    
 
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SAKA Food Delivery</title>
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
 
 <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-
-
-
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
-
 <body>
+    <!-- ===========================
+        NAVBAR START
+============================ -->
 
-```
-<!-- NAVBAR -->
+<header>
 
 <nav class="navbar">
 
-    <div class="logo">
-    <img src="images/logo.png" alt="Saka Logo">
-    <span>SAKA</span>
-</div>
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+<div class="logo">
 
-    <button class="nav-btn">
-        Order Now
-    </button>
+<img src="images/logo.png">
+
+<h2>SAKA</h2>
+
+</div>
+
+<ul class="nav-links">
+
+<li>
+<a class="active" href="index.html">
+Home
+</a>
+</li>
+
+<li>
+<a href="about.html">
+About
+</a>
+</li>
+
+<li>
+<a href="contact.html">
+Contact
+</a>
+</li>
+
+<li>
+<a href="submissions.html">
+Submissions
+</a>
+</li>
+
+</ul>
+
+<div class="nav-buttons">
+
+<button class="login-btn">
+
+Login
+
+</button>
+
+<button class="order-btn">
+
+Order Now
+
+</button>
+
+</div>
 
 </nav>
 
-<!-- HERO -->
+</header>
+
+<!-- ===========================
+         HERO SECTION
+============================ -->
 
 <section class="hero">
 
-    <div class="hero-content">
+<div class="hero-left">
 
-        <span class="badge">
-            🚀 Fastest Growing Food Startup
-        </span>
+<span class="hero-tag">
 
-        <h1>
-            Your Favorite Meals,
-            Delivered In Minutes.
-        </h1>
+🚀 India's Emerging Food Delivery Platform
 
-        <p>
-            Order from hundreds of restaurants and get fresh food delivered
-            right to your doorstep.
-        </p>
+</span>
 
-        <div class="hero-buttons">
+<h1>
 
-            <button class="primary-btn">
-                Order Food
-            </button>
+Food
 
-            <button class="secondary-btn">
-                View Restaurants
-            </button>
+<span>
 
-        </div>
+Delivered
 
-    </div>
+</span>
+
+In Minutes.
+
+</h1>
+
+<p>
+
+Discover amazing restaurants,
+exclusive offers,
+and lightning-fast delivery —
+all in one place.
+
+</p>
+
+<div class="hero-buttons">
+
+<button class="primary-btn">
+
+Order Food
+
+</button>
+
+<button class="secondary-btn">
+
+Explore Menu
+
+</button>
+
+</div>
+
+<div class="hero-stats">
+
+<div>
+
+<h2>
+
+500+
+
+</h2>
+
+<p>
+
+Restaurants
+
+</p>
+
+</div>
+
+<div>
+
+<h2>
+
+50K+
+
+</h2>
+
+<p>
+
+Orders Delivered
+
+</p>
+
+</div>
+
+<div>
+
+<h2>
+
+4.9★
+
+</h2>
+
+<p>
+
+Customer Rating
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<img
+src="images/hero.png"
+alt="Hero Food">
+
+</div>
 
 </section>
-
-<!-- SEARCH -->
+<!-- ===========================
+        SEARCH SECTION
+=========================== -->
 
 <section class="search-section">
 
-    <h2>Find Your Favorite Food</h2>
+    <div class="section-heading">
 
-    <div class="search-box">
+        <h2>Find Your Favorite Food</h2>
 
-        <input
-type="text"
-id="foodSearch"
-placeholder="Search food, restaurant, cuisine...">
+        <p>
+            Search from hundreds of restaurants and thousands of delicious dishes.
+        </p>
 
-        <button>
-            Search
-        </button>
+    </div>
+
+    <div class="search-container">
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="foodSearch"
+                placeholder="Search Pizza, Burger, Biryani...">
+
+            <button>
+
+                Search
+
+            </button>
+
+        </div>
 
     </div>
 
 </section>
 
-<!-- CATEGORIES -->
+<!-- ===========================
+      FOOD CATEGORIES
+=========================== -->
 
 <section class="categories">
 
-    <h2>Popular Categories</h2>
+    <div class="section-heading">
+
+        <h2>Popular Categories</h2>
+
+        <p>
+            Explore your favourite cuisines.
+        </p>
+
+    </div>
 
     <div class="category-grid">
 
-        <div class="category-card">🍕 Pizza</div>
-        <div class="category-card">🍔 Burger</div>
-        <div class="category-card">🍗 Chicken</div>
-        <div class="category-card">🥗 Healthy</div>
-        <div class="category-card">🍜 Noodles</div>
-        <div class="category-card">🍰 Desserts</div>
+        <div class="category-card">
+
+            <img src="images/pizza.jpg" alt="Pizza">
+
+            <h3>Pizza</h3>
+
+            <p>45 Restaurants</p>
+
+        </div>
+
+        <div class="category-card">
+
+            <img src="images/burger.jpg" alt="Burger">
+
+            <h3>Burger</h3>
+
+            <p>32 Restaurants</p>
+
+        </div>
+
+        <div class="category-card">
+
+            <img src="images/biryani.jpg" alt="Biryani">
+
+            <h3>Biryani</h3>
+
+            <p>28 Restaurants</p>
+
+        </div>
+
+        <div class="category-card">
+
+            <img src="images/chicken.jpg" alt="Chicken">
+
+            <h3>Chicken</h3>
+
+            <p>24 Restaurants</p>
+
+        </div>
+
+        <div class="category-card">
+
+            <img src="images/noodles.jpg" alt="Noodles">
+
+            <h3>Noodles</h3>
+
+            <p>19 Restaurants</p>
+
+        </div>
+
+        <div class="category-card">
+
+            <img src="images/dessert.jpg" alt="Dessert">
+
+            <h3>Desserts</h3>
+
+            <p>21 Restaurants</p>
+
+        </div>
 
     </div>
 
 </section>
 
-<!-- RESTAURANTS -->
+<!-- ===========================
+       WHY CHOOSE SAKA
+=========================== -->
+
+<section class="services">
+
+    <div class="section-heading">
+
+        <h2>Why Choose SAKA?</h2>
+
+        <p>
+            We make food delivery faster, safer, and more convenient.
+        </p>
+
+    </div>
+
+    <div class="service-grid">
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-motorcycle"></i>
+
+            <h3>Fast Delivery</h3>
+
+            <p>
+                Hot and fresh meals delivered in under 30 minutes.
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            <h3>Live Tracking</h3>
+
+            <p>
+                Track your order in real time from the restaurant to your doorstep.
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-wallet"></i>
+
+            <h3>Secure Payments</h3>
+
+            <p>
+                Multiple payment options with safe and secure transactions.
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-gift"></i>
+
+            <h3>Exclusive Offers</h3>
+
+            <p>
+                Enjoy exciting discounts, cashback, and reward points every day.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================================
+        FEATURED RESTAURANTS
+========================================== -->
 
 <section class="restaurants">
 
-    <h2>Top Restaurants</h2>
+    <div class="section-heading">
+
+        <h2>Featured Restaurants</h2>
+
+        <p>
+            Discover the highest-rated restaurants delivering fresh meals near you.
+        </p>
+
+    </div>
 
     <div class="restaurant-grid">
 
+        <!-- Restaurant 1 -->
+
         <div class="restaurant-card">
 
-            <img src="images/burger.jpg" alt="Burger Hub">
+            <div class="offer-tag">
+                50% OFF
+            </div>
 
-            <h3>Burger Hub</h3>
+            <img src="images/restaurant1.jpg" alt="Restaurant">
 
-            <p>⭐ 4.8 • 20 mins</p>
+            <div class="restaurant-content">
+
+                <div class="restaurant-header">
+
+                    <h3>Burger Hub</h3>
+
+                    <span class="rating">
+
+                        ⭐ 4.8
+
+                    </span>
+
+                </div>
+
+                <p class="cuisine">
+                    Burgers • Fries • Sandwiches
+                </p>
+
+                <div class="restaurant-info">
+
+                    <span>
+                        <i class="fa-solid fa-clock"></i>
+                        20 mins
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-location-dot"></i>
+                        3.5 km
+                    </span>
+
+                </div>
+
+                <button class="order-btn-card">
+
+                    Order Now
+
+                </button>
+
+            </div>
 
         </div>
 
+        <!-- Restaurant 2 -->
+
         <div class="restaurant-card">
 
-            <img src="images/pizza.jpg" alt="Pizza Palace">
-            <h3>Pizza Palace</h3>
+            <div class="offer-tag">
+                FREE DELIVERY
+            </div>
 
-            <p>⭐ 4.7 • 25 mins</p>
+            <img src="images/restaurant2.jpg" alt="Restaurant">
+
+            <div class="restaurant-content">
+
+                <div class="restaurant-header">
+
+                    <h3>Pizza Palace</h3>
+
+                    <span class="rating">
+
+                        ⭐ 4.9
+
+                    </span>
+
+                </div>
+
+                <p class="cuisine">
+                    Pizza • Pasta • Garlic Bread
+                </p>
+
+                <div class="restaurant-info">
+
+                    <span>
+                        <i class="fa-solid fa-clock"></i>
+                        25 mins
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-location-dot"></i>
+                        2.1 km
+                    </span>
+
+                </div>
+
+                <button class="order-btn-card">
+
+                    Order Now
+
+                </button>
+
+            </div>
 
         </div>
 
+        <!-- Restaurant 3 -->
+
         <div class="restaurant-card">
 
-            <img src="images/biriyani.jpg" alt="Biryani House">
+            <div class="offer-tag">
+                ₹100 OFF
+            </div>
 
-            <h3>Biryani House</h3>
+            <img src="images/restaurant3.jpg" alt="Restaurant">
 
-            <p>⭐ 4.9 • 18 mins</p>
+            <div class="restaurant-content">
+
+                <div class="restaurant-header">
+
+                    <h3>Biryani House</h3>
+
+                    <span class="rating">
+
+                        ⭐ 4.7
+
+                    </span>
+
+                </div>
+
+                <p class="cuisine">
+                    Biryani • Meals • Kebabs
+                </p>
+
+                <div class="restaurant-info">
+
+                    <span>
+                        <i class="fa-solid fa-clock"></i>
+                        18 mins
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-location-dot"></i>
+                        4 km
+                    </span>
+
+                </div>
+
+                <button class="order-btn-card">
+
+                    Order Now
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Restaurant 4 -->
+
+        <div class="restaurant-card">
+
+            <div class="offer-tag">
+                NEW
+            </div>
+
+            <img src="images/restaurant4.jpg" alt="Restaurant">
+
+            <div class="restaurant-content">
+
+                <div class="restaurant-header">
+
+                    <h3>Spice Garden</h3>
+
+                    <span class="rating">
+
+                        ⭐ 4.9
+
+                    </span>
+
+                </div>
+
+                <p class="cuisine">
+                    South Indian • North Indian
+                </p>
+
+                <div class="restaurant-info">
+
+                    <span>
+                        <i class="fa-solid fa-clock"></i>
+                        22 mins
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-location-dot"></i>
+                        1.8 km
+                    </span>
+
+                </div>
+
+                <button class="order-btn-card">
+
+                    Order Now
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================================
+            TRENDING DISHES
+========================================== -->
+
+<section class="trending">
+
+    <div class="section-heading">
+
+        <h2>Trending Dishes</h2>
+
+        <p>
+            Customers' most-loved meals this week.
+        </p>
+
+    </div>
+
+    <div class="dish-grid">
+
+        <div class="dish-card">
+
+            <img src="images/pizza.jpg">
+
+            <h3>Cheese Burst Pizza</h3>
+
+            <p>₹299</p>
+
+            <button>
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                Add to Cart
+
+            </button>
+
+        </div>
+
+        <div class="dish-card">
+
+            <img src="images/burger.jpg">
+
+            <h3>Double Cheese Burger</h3>
+
+            <p>₹199</p>
+
+            <button>
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                Add to Cart
+
+            </button>
+
+        </div>
+
+        <div class="dish-card">
+
+            <img src="images/biryani.jpg">
+
+            <h3>Chicken Biryani</h3>
+
+            <p>₹249</p>
+
+            <button>
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                Add to Cart
+
+            </button>
+
+        </div>
+
+        <div class="dish-card">
+
+            <img src="images/dessert.jpg">
+
+            <h3>Chocolate Brownie</h3>
+
+            <p>₹149</p>
+
+            <button>
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                Add to Cart
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================================
+        EXCLUSIVE OFFERS
+========================================== -->
+
+<section class="offers-section">
+
+    <div class="section-heading">
+
+        <h2>Exclusive Deals For You</h2>
+
+        <p>
+            Save more on every order with our exciting offers.
+        </p>
+
+    </div>
+
+    <div class="offers-grid">
+
+        <div class="offer-box">
+
+            <i class="fa-solid fa-percent"></i>
+
+            <h3>50% OFF</h3>
+
+            <p>On your first order above ₹299.</p>
+
+        </div>
+
+        <div class="offer-box">
+
+            <i class="fa-solid fa-truck-fast"></i>
+
+            <h3>Free Delivery</h3>
+
+            <p>Enjoy free delivery on orders above ₹499.</p>
+
+        </div>
+
+        <div class="offer-box">
+
+            <i class="fa-solid fa-wallet"></i>
+
+            <h3>Cashback</h3>
+
+            <p>Get up to ₹200 cashback using UPI.</p>
 
         </div>
 
@@ -164,123 +762,294 @@ placeholder="Search food, restaurant, cuisine...">
 
 </section>
 
-<!-- FEATURES -->
-
-<section class="features">
-
-    <h2>Why Choose Saka?</h2>
-
-    <div class="feature-grid">
-
-        <div class="feature-card">
-            ⚡ Fast Delivery
-        </div>
-
-        <div class="feature-card">
-            📍 Live Tracking
-        </div>
-
-        <div class="feature-card">
-            💳 Secure Payments
-        </div>
-
-        <div class="feature-card">
-            🎁 Daily Offers
-        </div>
-
-    </div>
-
-</section>
-
-<!-- STATS -->
+<!-- =========================================
+          COMPANY STATS
+========================================== -->
 
 <section class="stats">
 
-    <div class="stat">
-        <h2>500+</h2>
-        <p>Restaurants</p>
+    <div class="stat-card">
+
+        <h2 class="counter" data-target="500">0</h2>
+
+        <p>Restaurant Partners</p>
+
     </div>
 
-    <div class="stat">
-        <h2>50K+</h2>
-        <p>Orders</p>
+    <div class="stat-card">
+
+        <h2 class="counter" data-target="50000">0</h2>
+
+        <p>Orders Delivered</p>
+
     </div>
 
-    <div class="stat">
-        <h2>25+</h2>
-        <p>Cities</p>
+    <div class="stat-card">
+
+        <h2 class="counter" data-target="15000">0</h2>
+
+        <p>Happy Customers</p>
+
     </div>
 
-    <div class="stat">
-        <h2>4.9★</h2>
-        <p>Rating</p>
+    <div class="stat-card">
+
+        <h2 class="counter" data-target="120">0</h2>
+
+        <p>Delivery Partners</p>
+
     </div>
 
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- =========================================
+        CUSTOMER REVIEWS
+========================================== -->
 
 <section class="testimonials">
 
-    <h2>Customer Reviews</h2>
+    <div class="section-heading">
 
-    <div class="testimonial-card">
+        <h2>What Our Customers Say</h2>
 
-<p id="testimonial-text">
-Fast delivery and excellent customer service.
-</p>
+        <p>
+            Trusted by thousands of happy food lovers.
+        </p>
 
-<h4 id="testimonial-name">
-Rahul
-</h4>
+    </div>
 
-</div>
+    <div class="testimonial-slider">
 
-</section>
+        <div class="testimonial-card">
 
-<!-- APP SECTION -->
+            <img src="images/user1.jpg" alt="Customer">
 
-<section class="app-section">
+            <h3>Rahul Sharma</h3>
 
-    <h2>Download Saka App</h2>
+            <span>⭐⭐⭐⭐⭐</span>
 
-    <p>
-        Get exclusive offers and faster ordering.
-    </p>
-    <div class="app-preview">
+            <p>
 
-<img src="images/app-mockup.png"
-alt="Saka Mobile App">
+                Amazing delivery speed and delicious food.
+                My favourite food delivery platform!
 
-</div>
+            </p>
 
-    <div class="app-buttons">
+        </div>
 
-        <button>
-            Google Play
-        </button>
+        <div class="testimonial-card">
 
-        <button>
-            App Store
-        </button>
+            <img src="images/user2.jpg" alt="Customer">
+
+            <h3>Priya Nair</h3>
+
+            <span>⭐⭐⭐⭐⭐</span>
+
+            <p>
+
+                Easy ordering, smooth experience,
+                and fantastic discounts.
+
+            </p>
+
+        </div>
+
+        <div class="testimonial-card">
+
+            <img src="images/user3.jpg" alt="Customer">
+
+            <h3>Arjun Kumar</h3>
+
+            <span>⭐⭐⭐⭐⭐</span>
+
+            <p>
+
+                The UI looks premium and delivery
+                is always on time.
+
+            </p>
+
+        </div>
 
     </div>
 
 </section>
 
-<!-- FOOTER -->
+<!-- =========================================
+        MOBILE APP
+========================================== -->
+
+<section class="app-section">
+
+    <div class="app-left">
+
+        <h2>
+
+            Download the
+            SAKA Mobile App
+
+        </h2>
+
+        <p>
+
+            Order food faster,
+            track your delivery live,
+            earn rewards,
+            and enjoy exclusive app-only offers.
+
+        </p>
+
+        <div class="app-buttons">
+
+            <button>
+
+                <i class="fa-brands fa-google-play"></i>
+
+                Google Play
+
+            </button>
+
+            <button>
+
+                <i class="fa-brands fa-apple"></i>
+
+                App Store
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="app-right">
+
+        <img src="images/app.png" alt="App">
+
+    </div>
+
+</section>
+
+<!-- =========================================
+         NEWSLETTER
+========================================== -->
+
+<section class="newsletter">
+
+    <h2>
+
+        Stay Updated
+
+    </h2>
+
+    <p>
+
+        Subscribe to receive the latest offers and updates.
+
+    </p>
+
+    <form>
+
+        <input
+        type="email"
+        placeholder="Enter your email">
+
+        <button>
+
+            Subscribe
+
+        </button>
+
+    </form>
+
+</section>
+
+<!-- =========================================
+            FOOTER
+========================================== -->
 
 <footer>
 
-    <p>
-        © 2025 Saka Food Delivery
-    </p>
+<div class="footer-container">
+
+<div class="footer-column">
+
+<h2>SAKA</h2>
+
+<p>
+
+Delivering happiness
+one meal at a time.
+
+</p>
+
+</div>
+
+<div class="footer-column">
+
+<h3>Quick Links</h3>
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+<a href="submissions.html">Submissions</a>
+
+</div>
+
+<div class="footer-column">
+
+<h3>Services</h3>
+
+<p>Food Delivery</p>
+
+<p>Takeaway</p>
+
+<p>Restaurant Partners</p>
+
+<p>Offers</p>
+
+</div>
+
+<div class="footer-column">
+
+<h3>Contact</h3>
+
+<p>
+
+📍 Chennai, Tamil Nadu
+
+</p>
+
+<p>
+
+📞 +91 9876543210
+
+</p>
+
+<p>
+
+✉ support@sakafood.com
+
+</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<p class="copyright">
+
+© 2026 SAKA Food Delivery.
+All Rights Reserved.
+
+</p>
+
 
 </footer>
-
-<script src="script.js"></script>
-```
+<script src="js/script.js"></script>
 
 </body>
-
 </html>

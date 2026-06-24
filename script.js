@@ -1,289 +1,230 @@
-/* ==========================
-   MOBILE NAVIGATION
-========================== */
+// ==========================================
+// SAKA FOOD DELIVERY
+// script.js
+// General Website Functions
+// ==========================================
 
-const menuBtn = document.querySelector(".menu-btn");
-const navLinks = document.querySelector(".nav-links");
+// ==============================
+// Active Navigation Link
+// ==============================
 
-if(menuBtn){
+const currentPage = window.location.pathname.split("/").pop();
 
-    menuBtn.addEventListener("click", () => {
+const navLinks = document.querySelectorAll(".nav-links a");
 
-        navLinks.classList.toggle("show");
+navLinks.forEach(link => {
+
+    const href = link.getAttribute("href");
+
+    if (href === currentPage || (currentPage === "" && href === "index.html")) {
+
+        link.classList.add("active");
+
+    } else {
+
+        link.classList.remove("active");
+
+    }
+
+});
+
+// ==============================
+// Smooth Scroll
+// ==============================
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute("href"));
+
+        if (target) {
+
+            target.scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    });
+
+});
+
+// ==============================
+// Navbar Background on Scroll
+// ==============================
+
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 80) {
+
+        header.style.background = "rgba(10,10,10,0.97)";
+        header.style.boxShadow = "0 5px 20px rgba(0,0,0,.4)";
+
+    } else {
+
+        header.style.background = "rgba(15,15,15,.88)";
+        header.style.boxShadow = "none";
+
+    }
+
+});
+
+// ==============================
+// Counter Animation
+// ==============================
+
+const counters = document.querySelectorAll(".stat-card h2, .stat-box h2");
+
+const animateCounter = (counter) => {
+
+    const text = counter.innerText;
+
+    const number = parseInt(text.replace(/\D/g, ""));
+
+    if (isNaN(number)) return;
+
+    let count = 0;
+
+    const increment = Math.ceil(number / 100);
+
+    const update = () => {
+
+        count += increment;
+
+        if (count >= number) {
+
+            counter.innerText = text;
+
+        } else {
+
+            const suffix = text.replace(/[0-9]/g, "");
+
+            counter.innerText = count + suffix;
+
+            requestAnimationFrame(update);
+
+        }
+
+    };
+
+    update();
+
+};
+
+const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            animateCounter(entry.target);
+
+            observer.unobserve(entry.target);
+
+        }
+
+    });
+
+}, {
+
+    threshold: 0.5
+
+});
+
+counters.forEach(counter => observer.observe(counter));
+
+// ==============================
+// Reveal on Scroll
+// ==============================
+
+const revealElements = document.querySelectorAll(
+
+    ".category-card, .service-card, .restaurant-card, .dish-card, .offer-box, .mission-card, .why-card, .goal-card, .achievement-card"
+
+);
+
+const revealObserver = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+
+        }
+
+    });
+
+}, {
+
+    threshold: 0.15
+
+});
+
+revealElements.forEach(element => {
+
+    element.style.opacity = "0";
+    element.style.transform = "translateY(40px)";
+    element.style.transition = "all .6s ease";
+
+    revealObserver.observe(element);
+
+});
+
+// ==============================
+// Newsletter Form
+// ==============================
+
+const newsletterForm = document.querySelector(".newsletter form");
+
+if (newsletterForm) {
+
+    newsletterForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const email = this.querySelector("input").value.trim();
+
+        if (email === "") {
+
+            alert("Please enter your email.");
+
+            return;
+
+        }
+
+        alert("🎉 Thank you for subscribing to SAKA!");
+
+        this.reset();
 
     });
 
 }
 
-/* ==========================
-   CONTACT FORM VALIDATION
-========================== */
+// ==============================
+// Order Buttons
+// ==============================
 
-const contactForm = document.getElementById("contactForm");
+const orderButtons = document.querySelectorAll(
 
-if(contactForm){
+    ".order-btn, .order-btn-card, .primary-btn"
 
-contactForm.addEventListener("submit", function(e){
-
-e.preventDefault();
-
-const name =
-document.getElementById("name").value.trim();
-
-const email =
-document.getElementById("email").value.trim();
-
-const phone =
-document.getElementById("phone").value.trim();
-
-const subject =
-document.getElementById("subject").value.trim();
-
-const message =
-document.getElementById("message").value.trim();
-
-const emailPattern =
-/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-const phonePattern =
-/^[0-9]{10}$/;
-
-if(name === ""){
-
-alert("Please enter your name.");
-return;
-
-}
-
-if(!emailPattern.test(email)){
-
-alert("Please enter a valid email address.");
-return;
-
-}
-
-if(!phonePattern.test(phone)){
-
-alert("Please enter a valid 10-digit phone number.");
-return;
-
-}
-
-if(subject === ""){
-
-alert("Please enter a subject.");
-return;
-
-}
-
-if(message === ""){
-
-alert("Please enter your message.");
-return;
-
-}
-
-alert(
-"Thank you! Your message has been sent successfully."
 );
 
-contactForm.reset();
+orderButtons.forEach(button => {
 
-});
+    button.addEventListener("click", () => {
 
-}
+        console.log("Order button clicked");
 
-/* ==========================
-   ANIMATED COUNTERS
-========================== */
-
-const counters =
-document.querySelectorAll(".counter");
-
-const speed = 100;
-
-counters.forEach(counter => {
-
-const updateCount = () => {
-
-const target =
-+counter.getAttribute("data-target");
-
-const count =
-+counter.innerText;
-
-const increment =
-target / speed;
-
-if(count < target){
-
-counter.innerText =
-Math.ceil(count + increment);
-
-setTimeout(updateCount,20);
-
-}
-else{
-
-counter.innerText = target;
-
-}
-
-};
-
-updateCount();
-
-});
-
-/* ==========================
-   TESTIMONIAL SLIDER
-========================== */
-
-const testimonials = [
-
-{
-name:"Rahul",
-review:
-"Fast delivery and excellent customer service."
-},
-
-{
-name:"Priya",
-review:
-"Beautiful interface and easy ordering experience."
-},
-
-{
-name:"Arjun",
-review:
-"The best food delivery platform I've used."
-},
-
-{
-name:"Meena",
-review:
-"Quick delivery and amazing offers every day."
-}
-
-];
-
-const testimonialText =
-document.getElementById("testimonial-text");
-
-const testimonialName =
-document.getElementById("testimonial-name");
-
-let testimonialIndex = 0;
-
-function showTestimonials(){
-
-if(
-testimonialText &&
-testimonialName
-){
-
-testimonialText.innerText =
-testimonials[testimonialIndex].review;
-
-testimonialName.innerText =
-testimonials[testimonialIndex].name;
-
-testimonialIndex++;
-
-if(
-testimonialIndex >= testimonials.length
-){
-testimonialIndex = 0;
-}
-
-}
-
-}
-
-setInterval(showTestimonials,3000);
-
-/* ==========================
-   FOOD SEARCH
-========================== */
-
-const searchInput =
-document.getElementById("foodSearch");
-
-const restaurantCards =
-document.querySelectorAll(".restaurant-card");
-
-if(searchInput){
-
-searchInput.addEventListener("keyup", () => {
-
-const searchValue =
-searchInput.value.toLowerCase();
-
-restaurantCards.forEach(card => {
-
-const title =
-card.querySelector("h3")
-.innerText
-.toLowerCase();
-
-if(
-title.includes(searchValue)
-){
-
-card.style.display = "block";
-
-}
-else{
-
-card.style.display = "none";
-
-}
-
-});
-
-});
-
-}
-
-/* ==========================
-   SCROLL REVEAL EFFECT
-========================== */
-
-const revealElements =
-document.querySelectorAll(
-".feature-card, .restaurant-card, .category-card, .stat"
-);
-
-function reveal(){
-
-revealElements.forEach(element => {
-
-const windowHeight =
-window.innerHeight;
-
-const revealTop =
-element.getBoundingClientRect().top;
-
-const revealPoint = 100;
-
-if(revealTop < windowHeight - revealPoint){
-
-element.classList.add("active-reveal");
-
-}
-
-});
-
-}
-
-window.addEventListener("scroll", reveal);
-
-/* ==========================
-   PAGE LOAD ANIMATION
-========================== */
-
-window.addEventListener("load", () => {
-
-document.body.classList.add("loaded");
+    });
 
 });

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Submissions | SAKA Food Delivery</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ======================
+        NAVBAR
+====================== -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<img src="images/logo.png" alt="logo">
+
+<h2>SAKA</h2>
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li>
+
+<a class="active"
+href="submissions.html">
+
+Submissions
+
+</a>
+
+</li>
+
+</ul>
+
+<div class="nav-buttons">
+
+<button class="login-btn">
+
+Login
+
+</button>
+
+<button class="order-btn">
+
+Order Now
+
+</button>
+
+</div>
+
+</nav>
+
+</header>
+
+<!-- ======================
+        HERO
+====================== -->
+
+<section class="hero about-hero">
+
+<div class="hero-left">
+
+<span class="hero-tag">
+
+📋 Customer Messages
+
+</span>
+
+<h1>
+
+Saved
+
+<span>
+
+Submissions
+
+</span>
+
+</h1>
+
+<p>
+
+Every contact form submitted by
+customers is displayed here using
+LocalStorage.
+
+</p>
+
+</div>
+
+<div class="hero-right">
+
+<img src="images/submissions.png"
+alt="Submissions">
+
+</div>
+
+</section>
+
+<!-- ======================
+      DASHBOARD
+====================== -->
+
+<section class="submission-section">
+
+<div class="section-heading">
+
+<h2>
+
+Submission Dashboard
+
+</h2>
+
+<p>
+
+Manage all customer enquiries.
+
+</p>
+
+</div>
+
+<div class="dashboard-tools">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search by Name or Email...">
+
+<button
+id="clearAllBtn">
+
+Clear All
+
+</button>
+
+</div>
+
+<div id="submissionContainer">
+
+<!-- JavaScript loads cards here -->
+
+</div>
+
+</section>
+
+<script src="js/storage.js"></script>
+
+</body>
+
+</html>
